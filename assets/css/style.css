@@ -15,6 +15,6 @@
 @import url('./section/_hero.css');
 @import url('./section/_about.css');
 @import url('./section/_services.css');
-@import url('./section/why-choose.css');
-@import url('./section/process.css');
-@import url('./section/testimonials.css');
+@import url('./section/_why-choose.css');
+@import url('./section/_process.css');
+@import url('./section/_testimonials.css');
