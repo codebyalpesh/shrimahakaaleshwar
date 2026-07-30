@@ -1,0 +1,331 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Enterprise Design Token System
+   Single Source of Truth
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');   
+
+:root {
+
+  /* ==========================================================================
+     BRAND COLOR SYSTEM
+     ========================================================================== */
+
+  /* Primary (Saffron) */
+  --color-primary-50: #fff8eb;
+  --color-primary-100: #feefc8;
+  --color-primary-200: #fddf8d;
+  --color-primary-300: #fbca52;
+  --color-primary-400: #f8b72b;
+  --color-primary-500: #f59e0b;
+  --color-primary-600: #d97706;
+  --color-primary-700: #b45309;
+  --color-primary-800: #92400e;
+  --color-primary-900: #78350f;
+
+  --color-primary: var(--color-primary-500);
+  --color-primary-hover: var(--color-primary-600);
+  --color-primary-active: var(--color-primary-700);
+  --color-primary-disabled: var(--color-primary-200);
+
+  /* Secondary (Maroon) */
+
+  --color-secondary-50: #fdf3f5;
+  --color-secondary-100: #fae7ea;
+  --color-secondary-200: #f3cfd7;
+  --color-secondary-300: #e6a7b6;
+  --color-secondary-400: #d4718b;
+  --color-secondary-500: #b33a5a;
+  --color-secondary-600: #8b1e3f;
+  --color-secondary-700: #701834;
+  --color-secondary-800: #5a152d;
+  --color-secondary-900: #430f21;
+
+  --color-secondary: var(--color-secondary-500);
+  --color-secondary-hover: var(--color-secondary-600);
+  --color-secondary-active: var(--color-secondary-700);
+  --color-secondary-disabled: var(--color-secondary-200);
+
+  /* Accent (Gold) */
+
+  --color-accent-50: #fffdf4;
+  --color-accent-100: #fff8db;
+  --color-accent-200: #ffefb3;
+  --color-accent-300: #ffe27a;
+  --color-accent-400: #ffd84d;
+  --color-accent-500: #d4af37;
+  --color-accent-600: #b8912f;
+  --color-accent-700: #967426;
+  --color-accent-800: #775c1f;
+  --color-accent-900: #5c4617;
+
+  --color-accent: var(--color-accent-500);
+  --color-accent-hover: var(--color-accent-600);
+  --color-accent-active: var(--color-accent-700);
+  --color-accent-disabled: var(--color-accent-200);
+
+  /* ==========================================================================
+     NEUTRAL PALETTE
+     ========================================================================== */
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* ==========================================================================
+     SEMANTIC COLORS
+     ========================================================================== */
+
+  --color-success: #16a34a;
+  --color-success-hover: #15803d;
+  --color-success-active: #166534;
+  --color-success-disabled: #86efac;
+
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-danger-active: #991b1b;
+  --color-danger-disabled: #fca5a5;
+
+  --color-warning: #f59e0b;
+  --color-warning-hover: #d97706;
+  --color-warning-active: #b45309;
+  --color-warning-disabled: #fde68a;
+
+  --color-info: #2563eb;
+  --color-info-hover: #1d4ed8;
+  --color-info-active: #1e40af;
+  --color-info-disabled: #93c5fd;
+
+  /* ==========================================================================
+     BACKGROUND
+     ========================================================================== */
+
+  --color-bg: #ffffff;
+  --color-bg-soft: #fafafa;
+  --color-bg-muted: #f5f5f5;
+  --color-bg-dark: #171717;
+  --color-bg-inverse: #0a0a0a;
+
+  /* ==========================================================================
+     SURFACE
+     ========================================================================== */
+
+  --color-surface: #ffffff;
+  --color-surface-hover: #fafafa;
+  --color-surface-muted: #f5f5f5;
+  --color-surface-dark: #262626;
+  --color-surface-glass: rgba(255,255,255,.75);
+
+  /* ==========================================================================
+     TEXT
+     ========================================================================== */
+
+  --color-text-primary: #171717;
+  --color-text-secondary: #404040;
+  --color-text-muted: #737373;
+  --color-text-light: #a3a3a3;
+  --color-text-inverse: #ffffff;
+
+  /* ==========================================================================
+     BORDER
+     ========================================================================== */
+
+  --color-border: #e5e5e5;
+  --color-border-soft: #f1f1f1;
+  --color-border-strong: #d4d4d4;
+  --color-border-dark: #404040;
+
+  /* ==========================================================================
+     INTERACTIVE STATES
+     ========================================================================== */
+
+  --color-link: var(--color-primary-600);
+  --color-link-hover: var(--color-primary-700);
+  --color-focus-ring: rgba(245,158,11,.35);
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+  --font-primary:
+    "Poppins",
+    "Noto Sans Devanagari",
+    sans-serif;
+
+  --font-secondary:
+    "Merriweather",
+    "Noto Serif Devanagari",
+    serif;
+
+  --font-mono:
+    "JetBrains Mono",
+    monospace;
+
+  /* ==========================================================================
+     FONT SIZES
+     ========================================================================== */
+
+  --font-size-xs: clamp(.75rem,.72rem + .10vw,.8125rem);
+  --font-size-sm: clamp(.875rem,.84rem + .15vw,.9375rem);
+  --font-size-base: clamp(1rem,.96rem + .20vw,1.0625rem);
+  --font-size-lg: clamp(1.125rem,1.05rem + .25vw,1.25rem);
+  --font-size-xl: clamp(1.25rem,1.15rem + .35vw,1.5rem);
+  --font-size-2xl: clamp(1.5rem,1.3rem + .60vw,2rem);
+  --font-size-3xl: clamp(2rem,1.8rem + .80vw,3rem);
+  --font-size-4xl: clamp(2.5rem,2rem + 1vw,4rem);
+  --font-size-5xl: clamp(3rem,2.5rem + 1.2vw,5rem);
+
+  /* ==========================================================================
+     FONT WEIGHTS
+     ========================================================================== */
+
+  --font-weight-thin:100;
+  --font-weight-light:300;
+  --font-weight-normal:400;
+  --font-weight-medium:500;
+  --font-weight-semibold:600;
+  --font-weight-bold:700;
+  --font-weight-extrabold:800;
+  --font-weight-black:900;
+
+  /* ==========================================================================
+     LINE HEIGHTS
+     ========================================================================== */
+
+  --line-height-none:1;
+  --line-height-tight:1.2;
+  --line-height-snug:1.35;
+  --line-height-normal:1.5;
+  --line-height-relaxed:1.7;
+  --line-height-loose:2;
+
+  /* ==========================================================================
+     LETTER SPACING
+     ========================================================================== */
+
+  --letter-spacing-tight:-0.03em;
+  --letter-spacing-normal:0;
+  --letter-spacing-wide:.03em;
+  --letter-spacing-wider:.06em;
+  --letter-spacing-widest:.12em;
+
+  /* ==========================================================================
+     SPACING SCALE
+     ========================================================================== */
+
+  --space-0:0;
+  --space-1:.25rem;
+  --space-2:.5rem;
+  --space-3:.75rem;
+  --space-4:1rem;
+  --space-5:1.25rem;
+  --space-6:1.5rem;
+  --space-7:1.75rem;
+  --space-8:2rem;
+  --space-9:2.5rem;
+  --space-10:3rem;
+  --space-11:3.5rem;
+  --space-12:4rem;
+  --space-14:5rem;
+  --space-16:6rem;
+  --space-20:8rem;
+
+  /* ==========================================================================
+     BORDER RADIUS
+     ========================================================================== */
+
+  --radius-none:0;
+  --radius-xs:.25rem;
+  --radius-sm:.5rem;
+  --radius-md:.75rem;
+  --radius-lg:1rem;
+  --radius-xl:1.5rem;
+  --radius-2xl:2rem;
+  --radius-full:9999px;
+
+  /* ==========================================================================
+     SHADOWS
+     ========================================================================== */
+
+  --shadow-none:none;
+
+  --shadow-xs:
+      0 1px 2px rgba(0,0,0,.05);
+
+  --shadow-sm:
+      0 2px 4px rgba(0,0,0,.06),
+      0 1px 2px rgba(0,0,0,.04);
+
+  --shadow-md:
+      0 8px 16px rgba(0,0,0,.08),
+      0 2px 4px rgba(0,0,0,.05);
+
+  --shadow-lg:
+      0 16px 32px rgba(0,0,0,.10),
+      0 4px 8px rgba(0,0,0,.06);
+
+  --shadow-xl:
+      0 24px 48px rgba(0,0,0,.15),
+      0 8px 16px rgba(0,0,0,.08);
+
+  /* ==========================================================================
+     TRANSITIONS
+     ========================================================================== */
+
+  --transition-fast:150ms ease;
+  --transition-normal:250ms ease;
+  --transition-slow:400ms ease;
+
+  /* ==========================================================================
+     OPACITY
+     ========================================================================== */
+
+  --opacity-disabled:.45;
+  --opacity-muted:.70;
+  --opacity-overlay:.90;
+
+  /* ==========================================================================
+     BREAKPOINTS
+     ========================================================================== */
+
+  --breakpoint-sm:36rem;
+  --breakpoint-md:48rem;
+  --breakpoint-lg:62rem;
+  --breakpoint-xl:75rem;
+  --breakpoint-2xl:87.5rem;
+
+  /* ==========================================================================
+     CONTAINER
+     ========================================================================== */
+
+  --container-sm:33.75rem;
+  --container-md:45rem;
+  --container-lg:60rem;
+  --container-xl:71.25rem;
+  --container-2xl:82.5rem;
+
+  /* ==========================================================================
+     Z INDEX
+     ========================================================================== */
+
+  --z-base:1;
+  --z-dropdown:1000;
+  --z-sticky:1020;
+  --z-fixed:1030;
+  --z-modal-backdrop:1040;
+  --z-modal:1050;
+  --z-popover:1070;
+  --z-toast:1100;
+  --z-tooltip:1200;
+}
